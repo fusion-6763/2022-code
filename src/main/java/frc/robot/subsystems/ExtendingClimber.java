@@ -20,6 +20,12 @@ public class ExtendingClimber extends SubsystemBase {
       motor1.set(forwardSpeed);
       motor2.set(-forwardSpeed);
     }
+    public void runLeft(double forwardSpeed){
+        motor1.set(forwardSpeed);
+    }
+    public void runRight(double forwardSpeed){
+        motor2.set(-forwardSpeed);
+    }
     public void down(){
         motor1.set(speed);
         motor2.set(-speed);

@@ -17,6 +17,8 @@ import frc.robot.autonomous.ThePowerplayAuto;
 import frc.robot.commands.ClimberBackward;
 import frc.robot.commands.ClimberDown;
 import frc.robot.commands.ClimberForward;
+import frc.robot.commands.ClimberLeft;
+import frc.robot.commands.ClimberRight;
 import frc.robot.commands.ClimberUp;
 //import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.IntakeFast;
@@ -59,8 +61,12 @@ public class RobotContainer {
   private final JoystickButton speedUpButton = new JoystickButton(vroomstick, 1);
   private final JoystickButton climberUpButton = new JoystickButton(vroomstick, 6);
   private final JoystickButton climberDownButton = new JoystickButton(vroomstick, 4);
-  private final JoystickButton climberForwardButton = new JoystickButton(vroomstick, 7);
-  private final JoystickButton climberBackwardButton = new JoystickButton(vroomstick, 8);
+  // private final JoystickButton climberForwardButton = new JoystickButton(vroomstick, 7);
+  // private final JoystickButton climberBackwardButton = new JoystickButton(vroomstick, 8);
+  private final JoystickButton climberLeftForwardButton = new JoystickButton(vroomstick, 7);
+  private final JoystickButton climberLeftBackButton = new JoystickButton(vroomstick, 9);
+  private final JoystickButton climberRightForwardButton = new JoystickButton(vroomstick, 8);
+  private final JoystickButton climberRightBackButton = new JoystickButton(vroomstick, 10);
  
 
   //Puts a SendableChooser in Shuffleboard to choose autonomous command.
@@ -109,11 +115,17 @@ public class RobotContainer {
     outtakeButton.whenHeld(new OuttakeSlow(_tower));
     speedUpButton.whenHeld(new IntakeFast(_tower));
 
-    climberDownButton.whenHeld(new ClimberDown(_extendingClimber));
-    climberUpButton.whenHeld(new ClimberUp(_extendingClimber));
+    climberDownButton.whenHeld(new ClimberUp(_extendingClimber));
+    climberUpButton.whenHeld(new ClimberDown(_extendingClimber));
 
     //climberForwardButton.whenHeld(new ClimberForward(_rotatingClimber));
     //climberBackwardButton.whenHeld(new ClimberBackward(_rotatingClimber));
+
+    climberLeftForwardButton.whenHeld(new ClimberLeft(_extendingClimber, 1));
+    climberLeftBackButton.whenHeld(new ClimberLeft(_extendingClimber, -1));
+
+    climberRightForwardButton.whenHeld(new ClimberRight(_extendingClimber, 1));
+    climberRightBackButton.whenHeld(new ClimberRight(_extendingClimber, -1));
 
   }
 

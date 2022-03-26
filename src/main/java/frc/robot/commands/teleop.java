@@ -52,7 +52,7 @@ public class teleop extends CommandBase {
             rotatingClimber.run(Constants.ClimberConstants.rotatingSpeed);
         }
         else if (vroomstick.getPOV() == 180){
-            rotatingClimber.run(Constants.ClimberConstants.rotatingSpeed);
+            rotatingClimber.run(-Constants.ClimberConstants.rotatingSpeed);
         }
         else {
             rotatingClimber.run(0.0);
