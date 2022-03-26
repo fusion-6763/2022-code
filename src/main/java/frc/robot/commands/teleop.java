@@ -45,8 +45,18 @@ public class teleop extends CommandBase {
         }
         driveTrain.drive(-drivController.getRawAxis(1) * localMaxForwardSpeed,
                 -drivController.getRawAxis(0) * turnSpeed);
-        rotatingClimber.run(vroomstick.getRawAxis(1) * Constants.ClimberConstants.rotatingSpeed);
+        //rotatingClimber.run(vroomstick.getRawAxis(1) * Constants.ClimberConstants.rotatingSpeed);
+        //rotatingClimber.run(1.0);
         // }
+        if (vroomstick.getPOV() == 0){
+            rotatingClimber.run(Constants.ClimberConstants.rotatingSpeed);
+        }
+        else if (vroomstick.getPOV() == 180){
+            rotatingClimber.run(Constants.ClimberConstants.rotatingSpeed);
+        }
+        else {
+            rotatingClimber.run(0.0);
+        }
     }
 
     @Override

@@ -19,16 +19,16 @@ public class Tower extends SubsystemBase {
       motor.set(forwardSpeed);
     }
     public void intakeFast(){
-        motor.set(fastSpeed);
-    }
-    public void intakeSlow(){
-        motor.set(slowSpeed);
-    }
-    public void outtakeFast(){
         motor.set(-fastSpeed);
     }
-    public void outtakeSlow(){
+    public void intakeSlow(){
         motor.set(-slowSpeed);
+    }
+    public void outtakeFast(){
+        motor.set(fastSpeed);
+    }
+    public void outtakeSlow(){
+        motor.set(slowSpeed);
     }
 
     public void neutral(){

@@ -56,7 +56,7 @@ public class RobotContainer {
   //The buttons on the controllers are defined here.
   private final JoystickButton outtakeButton = new JoystickButton(driveController, XboxController.Button.kLeftBumper.value);
   private final JoystickButton intakeButton = new JoystickButton(driveController, XboxController.Button.kRightBumper.value);
-  private final JoystickButton speedUpButton = new JoystickButton(driveController, XboxController.Button.kB.value);
+  private final JoystickButton speedUpButton = new JoystickButton(vroomstick, 1);
   private final JoystickButton climberUpButton = new JoystickButton(vroomstick, 6);
   private final JoystickButton climberDownButton = new JoystickButton(vroomstick, 4);
   private final JoystickButton climberForwardButton = new JoystickButton(vroomstick, 7);
@@ -112,8 +112,8 @@ public class RobotContainer {
     climberDownButton.whenHeld(new ClimberDown(_extendingClimber));
     climberUpButton.whenHeld(new ClimberUp(_extendingClimber));
 
-    climberForwardButton.whenHeld(new ClimberForward(_rotatingClimber));
-    climberBackwardButton.whenHeld(new ClimberBackward(_rotatingClimber));
+    //climberForwardButton.whenHeld(new ClimberForward(_rotatingClimber));
+    //climberBackwardButton.whenHeld(new ClimberBackward(_rotatingClimber));
 
   }
 

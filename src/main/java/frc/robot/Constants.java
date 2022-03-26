@@ -25,7 +25,7 @@ public final class Constants {
         public static final double speedWhenIntaking = 0.6;
     }
     public static final class TowerConstants {
-        public static final double slowSpeed = .3;
+        public static final double slowSpeed = 1.0;
         public static final double fastSpeed = 1.0;
         public static final int SparkMaxPort = 5;
     }
@@ -43,7 +43,7 @@ public final class Constants {
         public static final double extendingSpeed = 1.0;
         public static final double extendingDefaultSpeed = 0.1;
         public static final int RotatingClimberSparkMax = 6;
-        public static final double rotatingSpeed = 0.2;
+        public static final double rotatingSpeed = 1.0;
         public static final double rotatingDefaultSpeed = 0;
     }
 }

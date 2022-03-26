@@ -1,14 +1,18 @@
 package frc.robot.subsystems;
 import frc.robot.Constants;
 
-import edu.wpi.first.wpilibj.motorcontrol.Spark;
+import java.io.Console;
+
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.SubsystemBase; 
 
 public class RotatingClimber extends SubsystemBase {
     private final double speed = Constants.ClimberConstants.rotatingSpeed;
     private final double defaultSpeed = Constants.ClimberConstants.rotatingDefaultSpeed;
-    private final Spark motor1 = new Spark(Constants.ClimberConstants.RotatingClimberSparkMax);
+    private final CANSparkMax motor1 = new CANSparkMax(Constants.ClimberConstants.RotatingClimberSparkMax, MotorType.kBrushless);
 
     public RotatingClimber(){
         setDefaultCommand(new RunCommand(this::neutral,this));
@@ -25,6 +29,6 @@ public class RotatingClimber extends SubsystemBase {
     }
 
     public void neutral(){
-        motor1.set(defaultSpeed);
+        //motor1.set(defaultSpeed);
     }
 }
