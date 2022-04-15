@@ -5,7 +5,7 @@
 package frc.robot.autonomous;
 
 import frc.robot.Constants;
-import frc.robot.commands.OuttakeFast;
+import frc.robot.commands.IntakeFast;
 import frc.robot.commands.customDrive;
 import frc.robot.commands.customTower;
 import frc.robot.subsystems.DriveTrain;
@@ -17,7 +17,7 @@ public class DineAndDashLeft extends SequentialCommandGroup {
 
   public DineAndDashLeft(DriveTrain _driveTrain, Tower _tower) {
     super(
-      new OuttakeFast(_tower).withTimeout(2),//, //Should be IntakeFast, but it is reversed. TODO:
+      new IntakeFast(_tower).withTimeout(2),//, //Should be IntakeFast, but it is reversed. TODO:
       new customTower(_tower, 0.0).withTimeout(0.1),
       new customDrive(_driveTrain, .6, Constants.AutoConstants.dineAndDashTurnSpeed).withTimeout(2.5)
     );

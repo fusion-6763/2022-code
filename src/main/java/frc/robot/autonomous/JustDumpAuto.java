@@ -4,7 +4,7 @@
 
 package frc.robot.autonomous;
 
-import frc.robot.commands.OuttakeFast;
+import frc.robot.commands.IntakeFast;
 import frc.robot.commands.customTower;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Tower;
@@ -16,7 +16,7 @@ public class JustDumpAuto extends SequentialCommandGroup {
   public JustDumpAuto(DriveTrain _driveTrain, Tower _tower) {
     super(
       //new customDrive(_driveTrain, -.5, 0).withTimeout(1),
-      new OuttakeFast(_tower).withTimeout(3),//, //Should be IntakeFast, but it is reversed. TODO:
+      new IntakeFast(_tower).withTimeout(3),//, //Should be IntakeFast, but it is reversed. TODO:
       new customTower(_tower, 0.0).withTimeout(0.1)
       //new customDrive(_driveTrain, .5, 0).withTimeout(2.5)
     );
