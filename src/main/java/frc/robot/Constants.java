@@ -25,8 +25,8 @@ public final class Constants {
         public static final double speedWhenIntaking = 0.3;
     }
     public static final class TowerConstants {
-        public static final double slowSpeed = 0.5;
-        public static final double fastSpeed = 1.0;
+        public static final double slowSpeed = 0;
+        public static final double fastSpeed = 0;
         public static final int SparkMaxPort = 5;
     }
     public static final class ControlConstants {
