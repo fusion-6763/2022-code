@@ -40,7 +40,7 @@ public final class Constants {
     public static final class ClimberConstants {
         public static final int SparkPort1 = 0; 
         public static final int SparkPort2 = 1;
-        public static final double extendingSpeed = .75;
+        public static final double extendingSpeed = 1;
         public static final double extendingDefaultSpeed = 0.1;
         public static final int RotatingClimberSparkMax = 6;
         public static final double rotatingSpeed = 1.0;
