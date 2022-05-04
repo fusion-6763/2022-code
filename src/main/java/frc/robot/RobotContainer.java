@@ -53,20 +53,19 @@ public class RobotContainer {
   private final RotatingClimber _rotatingClimber = new RotatingClimber();
 
   //The controllers are defined here.
-  private final Joystick vroomstick = new Joystick(Constants.ControlConstants.vroomstickPort);
-  private final XboxController driveController = new XboxController(Constants.ControlConstants.driveControllerPort);
+  private final Joystick guitar = new Joystick(Constants.ControlConstants.guitarPort);
   //The buttons on the controllers are defined here.
-  private final JoystickButton outtakeButton = new JoystickButton(driveController, XboxController.Button.kLeftBumper.value);
-  private final JoystickButton intakeButton = new JoystickButton(driveController, XboxController.Button.kRightBumper.value);
-  private final JoystickButton speedUpButton = new JoystickButton(vroomstick, 1);
-  private final JoystickButton climberUpButton = new JoystickButton(vroomstick, 6);
-  private final JoystickButton climberDownButton = new JoystickButton(vroomstick, 4);
-  // private final JoystickButton climberForwardButton = new JoystickButton(vroomstick, 7);
-  // private final JoystickButton climberBackwardButton = new JoystickButton(vroomstick, 8);
-  private final JoystickButton climberLeftForwardButton = new JoystickButton(vroomstick, 7);
-  private final JoystickButton climberLeftBackButton = new JoystickButton(vroomstick, 9);
-  private final JoystickButton climberRightForwardButton = new JoystickButton(vroomstick, 8);
-  private final JoystickButton climberRightBackButton = new JoystickButton(vroomstick, 10);
+  //private final JoystickButton outtakeButton = new JoystickButton(driveController, -1);
+  //private final JoystickButton intakeButton = new JoystickButton(driveController, -1);
+  //private final JoystickButton speedUpButton = new JoystickButton(vroomstick, -1);
+  private final JoystickButton climberUpButton = new JoystickButton(guitar, Constants.ControlConstants.guitarBlue);
+  private final JoystickButton climberDownButton = new JoystickButton(guitar, Constants.ControlConstants.guitarOrange);
+  private final JoystickButton climberForwardButton = new JoystickButton(guitar, Constants.ControlConstants.guitarSelect);
+  private final JoystickButton climberBackwardButton = new JoystickButton(guitar, Constants.ControlConstants.guitarStart);
+  //private final JoystickButton climberLeftForwardButton = new JoystickButton(vroomstick, 7);
+  //private final JoystickButton climberLeftBackButton = new JoystickButton(vroomstick, 9);
+  //private final JoystickButton climberRightForwardButton = new JoystickButton(vroomstick, 8);
+  //private final JoystickButton climberRightBackButton = new JoystickButton(vroomstick, 10);
  
 
   //Puts a SendableChooser in Shuffleboard to choose autonomous command.
@@ -111,21 +110,11 @@ public class RobotContainer {
     //While rightBumper and speedup button, outtake fast
     // intakeButton.and(speedUpButton).whileActiveContinuous(new OuttakeFast(_tower));
 
-    intakeButton.whenHeld(new IntakeSlow(_tower));
-    outtakeButton.whenHeld(new OuttakeSlow(_tower));
-    speedUpButton.whenHeld(new IntakeFast(_tower));
+    // climberDownButton.whenHeld(new ClimberUp(_extendingClimber));
+    // climberUpButton.whenHeld(new ClimberDown(_extendingClimber));
 
-    climberDownButton.whenHeld(new ClimberUp(_extendingClimber));
-    climberUpButton.whenHeld(new ClimberDown(_extendingClimber));
-
-    //climberForwardButton.whenHeld(new ClimberForward(_rotatingClimber));
-    //climberBackwardButton.whenHeld(new ClimberBackward(_rotatingClimber));
-
-    climberLeftForwardButton.whenHeld(new ClimberLeft(_extendingClimber, 1));
-    climberLeftBackButton.whenHeld(new ClimberLeft(_extendingClimber, -1));
-
-    climberRightForwardButton.whenHeld(new ClimberRight(_extendingClimber, 1));
-    climberRightBackButton.whenHeld(new ClimberRight(_extendingClimber, -1));
+    // climberForwardButton.whenHeld(new ClimberForward(_rotatingClimber));
+    // climberBackwardButton.whenHeld(new ClimberBackward(_rotatingClimber));
 
   }
 
@@ -139,6 +128,6 @@ public class RobotContainer {
     return autoChooser.getSelected();
   } 
   public Command getTeleopCommand(){
-    return new teleop(driveController, vroomstick, _driveTrain, intakeButton, _rotatingClimber);
+    return new teleop(guitar, _driveTrain);
   } 
 }

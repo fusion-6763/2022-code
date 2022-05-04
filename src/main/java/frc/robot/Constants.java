@@ -20,7 +20,7 @@ public final class Constants {
         public static final int DRIVE_LEFT_NEO_2 = 4;
         public static final int DRIVE_RIGHT_NEO_1 = 1;
         public static final int DRIVE_RIGHT_NEO_2 = 2;
-        public static final double maxSpeed = 0.8;
+        public static final double maxSpeed = 0.5;
         public static final double maxTurnSpeed = 0.8;
         public static final double speedWhenIntaking = 0.6;
     }
@@ -30,9 +30,16 @@ public final class Constants {
         public static final int SparkMaxPort = 5;
     }
     public static final class ControlConstants {
-        public static final int driveControllerPort = 0;
-        public static final int vroomstickPort = 1;
-        public static final int speedUpTowerButton = XboxController.Button.kA.value;
+        public static final int guitarPort = 0;
+
+        public static final int guitarGreen = 8;
+        public static final int guitarRed = 2;
+        public static final int guitarYellow = 1;
+        public static final int guitarBlue = 3;
+        public static final int guitarOrange = 4;
+        public static final int guitarSelect = 9;
+        public static final int guitarStart = 10;
+
     }
     public static final class AutoConstants {
         public static final double dineAndDashTurnSpeed = 0.3;
