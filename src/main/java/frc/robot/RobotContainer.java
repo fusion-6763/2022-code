@@ -110,11 +110,11 @@ public class RobotContainer {
     //While rightBumper and speedup button, outtake fast
     // intakeButton.and(speedUpButton).whileActiveContinuous(new OuttakeFast(_tower));
 
-    // climberDownButton.whenHeld(new ClimberUp(_extendingClimber));
-    // climberUpButton.whenHeld(new ClimberDown(_extendingClimber));
+    climberDownButton.whenHeld(new ClimberUp(_extendingClimber));
+    climberUpButton.whenHeld(new ClimberDown(_extendingClimber));
 
-    // climberForwardButton.whenHeld(new ClimberForward(_rotatingClimber));
-    // climberBackwardButton.whenHeld(new ClimberBackward(_rotatingClimber));
+    climberForwardButton.whenHeld(new ClimberForward(_rotatingClimber));
+    climberBackwardButton.whenHeld(new ClimberBackward(_rotatingClimber));
 
   }
 

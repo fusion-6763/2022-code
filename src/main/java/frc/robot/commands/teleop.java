@@ -53,7 +53,7 @@ public class teleop extends CommandBase {
             left = -1;
         }
 
-        driveTrain.drive(forward * maxForwardSpeed, left * turnSpeed);
+        driveTrain.drive(-forward * maxForwardSpeed, left * turnSpeed);
 
 
         // if (vroomstick.getPOV() == 0){

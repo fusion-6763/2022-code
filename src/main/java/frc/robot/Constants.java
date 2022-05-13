@@ -21,7 +21,7 @@ public final class Constants {
         public static final int DRIVE_RIGHT_NEO_1 = 1;
         public static final int DRIVE_RIGHT_NEO_2 = 2;
         public static final double maxSpeed = 0.5;
-        public static final double maxTurnSpeed = 0.8;
+        public static final double maxTurnSpeed = 0.5;
         public static final double speedWhenIntaking = 0.6;
     }
     public static final class TowerConstants {
@@ -50,7 +50,7 @@ public final class Constants {
         public static final double extendingSpeed = .75;
         public static final double extendingDefaultSpeed = 0.1;
         public static final int RotatingClimberSparkMax = 6;
-        public static final double rotatingSpeed = 1.0;
+        public static final double rotatingSpeed = 1;
         public static final double rotatingDefaultSpeed = 0;
     }
 }
