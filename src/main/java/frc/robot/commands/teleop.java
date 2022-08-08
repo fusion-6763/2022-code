@@ -40,6 +40,7 @@ public class teleop extends CommandBase {
         // }
         // else {
         double localMaxForwardSpeed = maxForwardSpeed;
+        //Slows down forward speed if intaking
         if (intakeButton.get()) {
             localMaxForwardSpeed = speedWhenIntaking;
         }
@@ -48,6 +49,7 @@ public class teleop extends CommandBase {
         //rotatingClimber.run(vroomstick.getRawAxis(1) * Constants.ClimberConstants.rotatingSpeed);
         //rotatingClimber.run(1.0);
         // }
+        //Handles rotating the rotatingClimber.
         if (vroomstick.getPOV() == 0){
             rotatingClimber.run(Constants.ClimberConstants.rotatingSpeed);
         }
