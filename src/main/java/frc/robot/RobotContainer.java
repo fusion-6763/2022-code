@@ -71,6 +71,7 @@ public class RobotContainer {
 
   //Puts a SendableChooser in Shuffleboard to choose autonomous command.
   private final SendableChooser<Command> autoChooser = new SendableChooser<Command>();
+
   //private final DriveForwardAuto driveForwardAuto = new DriveForwardAuto();
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */

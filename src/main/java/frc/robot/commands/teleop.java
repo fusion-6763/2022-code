@@ -59,6 +59,7 @@ public class teleop extends CommandBase {
         else {
             rotatingClimber.run(0.0);
         }
+
     }
 
     @Override

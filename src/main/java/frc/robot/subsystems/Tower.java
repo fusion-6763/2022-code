@@ -2,6 +2,8 @@ package frc.robot.subsystems;
 import com.revrobotics.*;
 import frc.robot.Constants;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.SubsystemBase; 
 
@@ -9,7 +11,7 @@ public class Tower extends SubsystemBase {
     private final double fastSpeed = Constants.TowerConstants.fastSpeed;
     private final double slowSpeed = Constants.TowerConstants.slowSpeed;
     private final CANSparkMax motor = new CANSparkMax(Constants.TowerConstants.SparkMaxPort,MotorType.kBrushless);
-
+    private final CANSparkMax motor2 = new CANSparkMax(7,MotorType.kBrushless);
 
     public Tower(){
         setDefaultCommand(new RunCommand(this::neutral,this));
@@ -17,21 +19,25 @@ public class Tower extends SubsystemBase {
 
     public void run(Double forwardSpeed){
       motor.set(forwardSpeed);
+        motor2.set(-forwardSpeed);
+      SmartDashboard.putNumber("Intake Speed", motor.getEncoder().getVelocity());
     }
     public void intakeFast(){
-        motor.set(-fastSpeed);
+        this.run(-fastSpeed);
     }
     public void intakeSlow(){
-        motor.set(-slowSpeed);
+        this.run(-slowSpeed);
     }
     public void outtakeFast(){
-        motor.set(fastSpeed);
+        this.run(fastSpeed);
     }
     public void outtakeSlow(){
-        motor.set(slowSpeed);
+        this.run(slowSpeed);
     }
 
     public void neutral(){
         motor.stopMotor();
+        motor2.stopMotor();
+        SmartDashboard.putNumber("Intake Speed", motor.getEncoder().getVelocity());
     }
 }

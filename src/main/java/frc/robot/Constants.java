@@ -20,12 +20,12 @@ public final class Constants {
         public static final int DRIVE_LEFT_NEO_2 = 4;
         public static final int DRIVE_RIGHT_NEO_1 = 1;
         public static final int DRIVE_RIGHT_NEO_2 = 2;
-        public static final double maxSpeed = 0.8;
-        public static final double maxTurnSpeed = 0.8;
-        public static final double speedWhenIntaking = 0.6;
+        public static final double maxSpeed = 0.5;
+        public static final double maxTurnSpeed = 0.5;
+        public static final double speedWhenIntaking = 0.4;
     }
     public static final class TowerConstants {
-        public static final double slowSpeed = 0.5;
+        public static final double slowSpeed = 0.3;
         public static final double fastSpeed = 1.0;
         public static final int SparkMaxPort = 5;
     }
