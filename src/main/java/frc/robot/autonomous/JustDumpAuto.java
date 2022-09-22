@@ -15,10 +15,8 @@ public class JustDumpAuto extends SequentialCommandGroup {
 
   public JustDumpAuto(DriveTrain _driveTrain, Tower _tower) {
     super(
-      //new customDrive(_driveTrain, -.5, 0).withTimeout(1),
-      new IntakeFast(_tower).withTimeout(3),//, //Should be IntakeFast, but it is reversed. TODO:
+      new IntakeFast(_tower).withTimeout(3),
       new customTower(_tower, 0.0).withTimeout(0.1)
-      //new customDrive(_driveTrain, .5, 0).withTimeout(2.5)
     );
   }
 }

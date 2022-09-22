@@ -17,7 +17,7 @@ public class DineAndDashRight extends SequentialCommandGroup {
 
   public DineAndDashRight(DriveTrain _driveTrain, Tower _tower) {
     super(
-      new IntakeFast(_tower).withTimeout(2),//, //Should be IntakeFast, but it is reversed. TODO:
+      new IntakeFast(_tower).withTimeout(2),
       new customTower(_tower, 0.0).withTimeout(0.1),
       new customDrive(_driveTrain, .6, -Constants.AutoConstants.dineAndDashTurnSpeed).withTimeout(2.5)
     );

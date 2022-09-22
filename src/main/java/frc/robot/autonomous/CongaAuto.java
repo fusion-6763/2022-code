@@ -16,7 +16,7 @@ public class CongaAuto extends SequentialCommandGroup {
 
   public CongaAuto(DriveTrain _driveTrain, Tower _tower) {
     super(
-      new IntakeFast(_tower).withTimeout(3),//, //Should be IntakeFast, but it is reversed. TODO:
+      new IntakeFast(_tower).withTimeout(3),
       new customTower(_tower, 0.0).withTimeout(0.1),
       new customDrive(_driveTrain, .8, 0).withTimeout(3.5)
     );
