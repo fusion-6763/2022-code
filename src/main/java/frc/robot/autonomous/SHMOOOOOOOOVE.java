@@ -12,13 +12,13 @@ import frc.robot.subsystems.Tower;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 
 /** An example command that uses an example subsystem. */
-public class DumpAndJumpAuto extends SequentialCommandGroup {
+public class SHMOOOOOOOOVE extends SequentialCommandGroup {
 
-  public DumpAndJumpAuto(DriveTrain _driveTrain, Tower _tower) {
+  public SHMOOOOOOOOVE(DriveTrain _driveTrain, Tower _tower) {
     super(
+      new customDrive(_driveTrain, -.5, 0).withTimeout(3),
       new IntakeFast(_tower).withTimeout(3),
-      new customTower(_tower, 0.0).withTimeout(7),
-      new customDrive(_driveTrain, .5, 0).withTimeout(3)
+      new customTower(_tower, 0.0).withTimeout(7)
     );
   }
 }

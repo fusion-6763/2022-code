@@ -13,7 +13,7 @@ public class DriveForwardAuto extends SequentialCommandGroup {
 
   public DriveForwardAuto(DriveTrain _driveTrain) {
     super(
-      new customDrive(_driveTrain, .8, 0).withTimeout(1)
+      new customDrive(_driveTrain, -.8, 0).withTimeout(1)
     );
   }
 }

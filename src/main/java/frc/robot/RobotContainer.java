@@ -13,6 +13,7 @@ import frc.robot.autonomous.DineAndDashRight;
 import frc.robot.autonomous.DriveForwardAuto;
 import frc.robot.autonomous.DumpAndJumpAuto;
 import frc.robot.autonomous.JustDumpAuto;
+import frc.robot.autonomous.SHMOOOOOOOOVE;
 import frc.robot.autonomous.ThePowerplayAuto;
 import frc.robot.commands.ClimberBackward;
 import frc.robot.commands.ClimberDown;
@@ -89,6 +90,7 @@ public class RobotContainer {
     autoChooser.addOption("LEFT Dine & Dash", new DineAndDashLeft(_driveTrain, _tower));
     autoChooser.addOption("RIGHT Dine & Dash", new DineAndDashRight(_driveTrain, _tower));
     autoChooser.addOption("Conga Conga Conga", new CongaAuto(_driveTrain, _tower));
+    autoChooser.addOption("SHMOOOOOOOOVE", new SHMOOOOOOOOVE(_driveTrain, _tower));
 
     //Put the autoChooser in ShuffleBoard. This line should be 
     //after all .setDefaultOption and .addOption lines.

@@ -19,7 +19,7 @@ public class DineAndDashLeft extends SequentialCommandGroup {
     super(
       new IntakeFast(_tower).withTimeout(2),
       new customTower(_tower, 0.0).withTimeout(0.1),
-      new customDrive(_driveTrain, .6, Constants.AutoConstants.dineAndDashTurnSpeed).withTimeout(2.5)
+      new customDrive(_driveTrain, -.6, Constants.AutoConstants.dineAndDashTurnSpeed).withTimeout(2.5)
     );
   }
 }

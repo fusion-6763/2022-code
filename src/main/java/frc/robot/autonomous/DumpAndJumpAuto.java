@@ -18,7 +18,7 @@ public class DumpAndJumpAuto extends SequentialCommandGroup {
     super(
       new IntakeFast(_tower).withTimeout(3),
       new customTower(_tower, 0.0).withTimeout(7),
-      new customDrive(_driveTrain, .5, 0).withTimeout(3)
+      new customDrive(_driveTrain, -.5, 0).withTimeout(3)
     );
   }
 }

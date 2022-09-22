@@ -13,7 +13,7 @@ public class ThePowerplayAuto extends SequentialCommandGroup {
 
   public ThePowerplayAuto(DriveTrain _driveTrain) {
     super(
-      new customDrive(_driveTrain, .8, 0).withTimeout(1),
+      new customDrive(_driveTrain, -.8, 0).withTimeout(1),
       new customDrive(_driveTrain, 0, 0).withTimeout(.5),
       new customDrive(_driveTrain, 0, 1).withTimeout(5)
     );
